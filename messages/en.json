@@ -1,0 +1,635 @@
+{
+  "error": {
+    "code": "500",
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry_label": "Try Again",
+    "home_label": "Back to Home"
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn't find the page you were looking for.",
+    "home_label": "Back to Home",
+    "browse_label": "Browse Products"
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "All Products",
+    "categories": "Categories",
+    "brands": "Brands",
+    "deals": "Best Deals",
+    "about": "About Us",
+    "contact": "Contact",
+    "get_started": "Start Shopping",
+    "preferences": "Preferences",
+    "cart": "Cart",
+    "account": "My Account",
+    "orders": "My Orders",
+    "wishlist": "Wishlist"
+  },
+  "app": {
+    "platform": {
+      "identifier": "shoopby",
+      "name": "Shoopby",
+      "tagline": "Everything You Love, All in One Place",
+      "short_description": "Shoopby is a modern online shopping platform where customers can discover products across multiple categories, explore brands, and place orders with ease.",
+      "full_description": "Shoopby is a single-vendor ecommerce platform that allows customers to browse products across multiple categories, discover brands, explore special offers, and place orders easily. Customers can manage their profiles, track orders, view order history, and submit product reviews. Cash on Delivery is currently supported, with the flexibility to integrate additional online payment methods in the future.",
+      "currency": "BDT",
+      "currency_symbol": "৳",
+      "country": "Bangladesh",
+      "locale": "en-BD",
+      "value_propositions": [
+        "Discover products across multiple categories",
+        "Explore products from popular brands",
+        "Shop featured products and exclusive deals",
+        "Place orders and track their status easily",
+        "Enjoy convenient Cash on Delivery",
+        "Make informed purchases with customer reviews and ratings"
+      ],
+      "features": [
+        "Product catalog",
+        "Product categories",
+        "Brand-based browsing",
+        "Featured products",
+        "Best deals",
+        "Product search and filtering",
+        "Shopping cart",
+        "Cash on Delivery checkout",
+        "Customer authentication",
+        "Customer profile management",
+        "Order history and tracking",
+        "Product reviews and ratings",
+        "Role-based admin panel",
+        "Inventory management",
+        "Order management",
+        "Extensible payment integration"
+      ],
+      "payment_methods": [
+        {
+          "identifier": "cash_on_delivery",
+          "name": "Cash on Delivery",
+          "description": "Pay when your order arrives.",
+          "enabled": true
+        }
+      ],
+      "contact": {
+        "website": "",
+        "email": "",
+        "phone": "",
+        "facebook": "",
+        "instagram": ""
+      },
+      "disclaimer": "Product prices, availability, delivery times, and promotional offers are subject to the information displayed at the time of ordering."
+    },
+    "home": {
+      "announcement_bar": {
+        "enabled": true,
+        "text": "Discover your favorite products and order with ease."
+      },
+      "search": {
+        "placeholder": "Search products, categories, or brands",
+        "submit_label": "Search",
+        "empty_label": "No products found",
+        "suggestions_label": "Popular Searches"
+      },
+      "hero": {
+        "eyebrow": "Welcome to Shoopby",
+        "title": "Everything You Love, All in One Place",
+        "description": "Discover your favorite products, explore the best deals, and enjoy a seamless shopping experience.",
+        "primary_action": "Shop Now",
+        "primary_action_href": "/products",
+        "secondary_action": "Explore Deals",
+        "secondary_action_href": "/deals"
+      },
+      "carousel": [
+        {
+          "title": "Discover Products You'll Love",
+          "description": "Explore products across multiple categories and find what you need.",
+          "primary_action": "Browse Products",
+          "primary_action_href": "/products",
+          "secondary_action": "Explore Categories",
+          "secondary_action_href": "/categories",
+          "image_alt": "A collection of products from different categories"
+        },
+        {
+          "title": "Great Products, Better Deals",
+          "description": "Discover special offers and save on selected products.",
+          "primary_action": "Explore Deals",
+          "primary_action_href": "/deals",
+          "secondary_action": "Popular Products",
+          "secondary_action_href": "/products?sort=popular",
+          "image_alt": "Products available at special prices"
+        },
+        {
+          "title": "Easy Ordering, Convenient Payment",
+          "description": "Order your favorite products and pay when they arrive.",
+          "primary_action": "Start Shopping",
+          "primary_action_href": "/products",
+          "secondary_action": "How to Order",
+          "secondary_action_href": "/how-to-order",
+          "image_alt": "Online shopping and product delivery"
+        }
+      ],
+      "sections": {
+        "categories": {
+          "title": "Shop by Category",
+          "description": "Find products that match your needs.",
+          "view_all_label": "View All Categories",
+          "empty_label": "No categories available"
+        },
+        "featured_products": {
+          "title": "Featured Products",
+          "description": "Handpicked products selected for you.",
+          "view_all_label": "View All",
+          "empty_label": "No featured products available right now"
+        },
+        "best_deals": {
+          "title": "Today's Best Deals",
+          "description": "Shop your favorites at special prices.",
+          "view_all_label": "View All Deals",
+          "empty_label": "No special offers available right now"
+        },
+        "best_sellers": {
+          "title": "Popular Products",
+          "description": "Discover products loved by our customers.",
+          "view_all_label": "View Best Sellers",
+          "empty_label": "No popular products available right now"
+        },
+        "new_arrivals": {
+          "title": "New Arrivals",
+          "description": "Explore our latest product collection.",
+          "view_all_label": "View New Arrivals",
+          "empty_label": "No new products available right now"
+        },
+        "brands": {
+          "title": "Popular Brands",
+          "description": "Explore products from your favorite brands.",
+          "view_all_label": "View All Brands",
+          "empty_label": "No brands available"
+        }
+      }
+    }
+  },
+  "products": {
+    "page": {
+      "title": "All Products",
+      "description": "Browse our products and find the right items for your needs.",
+      "search_placeholder": "Search products",
+      "sort_label": "Sort By",
+      "filter_label": "Filters",
+      "clear_filters_label": "Clear All Filters",
+      "results_label": "products found",
+      "empty_title": "No Products Found",
+      "empty_description": "Try searching with a different name or category.",
+      "loading_label": "Loading products..."
+    },
+    "sort_options": {
+      "featured": "Featured",
+      "newest": "Newest Arrivals",
+      "popular": "Most Popular",
+      "price_low_to_high": "Price: Low to High",
+      "price_high_to_low": "Price: High to Low",
+      "rating": "Highest Rated"
+    },
+    "filters": {
+      "category": "Category",
+      "brand": "Brand",
+      "price": "Price",
+      "min_price": "Minimum Price",
+      "max_price": "Maximum Price",
+      "availability": "Availability",
+      "in_stock": "In Stock",
+      "out_of_stock": "Out of Stock",
+      "rating": "Rating",
+      "discount": "Discount"
+    },
+    "card": {
+      "add_to_cart": "Add to Cart",
+      "view_details": "View Details",
+      "out_of_stock": "Out of Stock",
+      "featured": "Featured",
+      "best_seller": "Best Seller",
+      "new_arrival": "New Arrival",
+      "best_deal": "Best Deal",
+      "discount_label": "OFF",
+      "original_price": "Original Price",
+      "selling_price": "Current Price",
+      "rating_label": "Rating",
+      "reviews_label": "Reviews",
+      "added_to_cart": "Added to Cart",
+      "add_to_wishlist": "Add to Wishlist",
+      "remove_from_wishlist": "Remove from Wishlist"
+    },
+    "details": {
+      "description": "Product Description",
+      "specifications": "Specifications",
+      "brand": "Brand",
+      "category": "Category",
+      "sku": "SKU",
+      "availability": "Availability",
+      "in_stock": "In Stock",
+      "out_of_stock": "Out of Stock",
+      "quantity": "Quantity",
+      "increase_quantity": "Increase Quantity",
+      "decrease_quantity": "Decrease Quantity",
+      "add_to_cart": "Add to Cart",
+      "buy_now": "Buy Now",
+      "related_products": "Related Products",
+      "reviews_title": "Customer Reviews",
+      "write_review": "Write a Review",
+      "no_reviews": "No reviews for this product yet.",
+      "login_to_review": "Log in to Write a Review"
+    },
+    "reviews": {
+      "title": "Product Reviews",
+      "rating_label": "Your Rating",
+      "comment_label": "Your Review",
+      "comment_placeholder": "Share your experience with this product",
+      "submit_label": "Submit Review",
+      "success_message": "Your review has been submitted.",
+      "error_message": "Unable to submit your review. Please try again.",
+      "login_required": "Please log in to submit a review.",
+      "verified_purchase": "Verified Purchase"
+    }
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "subtitle": "Review the products you've selected.",
+    "empty_title": "Your Cart Is Empty",
+    "empty_description": "Add your favorite products to the cart to start shopping.",
+    "continue_shopping": "Continue Shopping",
+    "product": "Product",
+    "price": "Price",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "remove": "Remove",
+    "clear_cart": "Clear Cart",
+    "order_summary": "Order Summary",
+    "subtotal_label": "Subtotal",
+    "discount_label": "Discount",
+    "shipping_label": "Shipping",
+    "total_label": "Total",
+    "checkout": "Proceed to Checkout",
+    "update_cart": "Update Cart",
+    "item_added": "Product added to your cart.",
+    "item_removed": "Product removed from your cart.",
+    "quantity_updated": "Product quantity updated.",
+    "stock_error": "There is not enough stock available.",
+    "minimum_quantity_error": "Quantity must be at least 1."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "subtitle": "Enter your delivery details to complete your order.",
+    "steps": {
+      "shipping": "Delivery Details",
+      "payment": "Payment Method",
+      "review": "Review Order"
+    },
+    "customer_information": {
+      "title": "Customer Information",
+      "full_name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "optional": "Optional"
+    },
+    "shipping_address": {
+      "title": "Delivery Address",
+      "division": "Division",
+      "district": "District",
+      "upazila": "Upazila",
+      "city": "City",
+      "area": "Area",
+      "address_line": "Full Address",
+      "address_placeholder": "Enter your house number, road, area, and other details",
+      "postal_code": "Postal Code",
+      "delivery_note": "Delivery Instructions",
+      "delivery_note_placeholder": "Add any special delivery instructions"
+    },
+    "payment": {
+      "title": "Payment Method",
+      "cash_on_delivery": "Cash on Delivery",
+      "cash_on_delivery_description": "Pay when your order arrives.",
+      "selected_label": "Selected Payment Method",
+      "online_payment": "Online Payment",
+      "online_payment_coming_soon": "Coming Soon"
+    },
+    "order_summary": {
+      "title": "Order Summary",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "total": "Total",
+      "payment_method": "Payment Method"
+    },
+    "actions": {
+      "continue": "Continue",
+      "back": "Go Back",
+      "place_order": "Place Order",
+      "processing": "Processing Order..."
+    },
+    "validation": {
+      "name_required": "Please enter your name.",
+      "phone_required": "Please enter your phone number.",
+      "phone_invalid": "Please enter a valid Bangladeshi phone number.",
+      "email_invalid": "Please enter a valid email address.",
+      "division_required": "Please select a division.",
+      "district_required": "Please select a district.",
+      "address_required": "Please enter your full address.",
+      "payment_required": "Please select a payment method.",
+      "cart_empty": "Your shopping cart is empty."
+    },
+    "success": {
+      "title": "Order Placed Successfully",
+      "description": "Your order has been received. You can view the order details in your account.",
+      "order_number": "Order Number",
+      "view_order": "View Order",
+      "continue_shopping": "Continue Shopping"
+    },
+    "error": {
+      "title": "Unable to Place Order",
+      "description": "Your order could not be completed. Please review your information and try again.",
+      "retry": "Try Again"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Log in to manage your account and orders.",
+      "submit_button": "Log In",
+      "no_account": "Don't have an account?",
+      "register_link": "Create an Account"
+    },
+    "register": {
+      "title": "Create Your Account",
+      "subtitle": "Join Shoopby and start shopping today.",
+      "submit_button": "Create Account",
+      "has_account": "Already have an account?",
+      "login_link": "Log In"
+    },
+    "fields": {
+      "full_name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder_login": "Enter your password",
+        "placeholder_register": "Enter a password with at least 8 characters",
+        "forgot_password": "Forgot Password?"
+      },
+      "confirm_password": {
+        "label": "Confirm Password",
+        "placeholder": "Enter your password again"
+      }
+    },
+    "validation": {
+      "name_required": "Please enter your name.",
+      "phone_required": "Please enter your phone number.",
+      "phone_invalid": "Please enter a valid Bangladeshi phone number.",
+      "email_required": "Please enter your email address.",
+      "email_invalid": "Please enter a valid email address.",
+      "password_required": "Please enter your password.",
+      "password_min": "Password must contain at least 8 characters.",
+      "password_mismatch": "Passwords do not match."
+    },
+    "messages": {
+      "login_success": "You have logged in successfully.",
+      "register_success": "Your account has been created successfully.",
+      "logout_success": "You have logged out successfully.",
+      "invalid_credentials": "The login details you entered are incorrect.",
+      "account_exists": "An account with these details already exists.",
+      "generic_error": "Something went wrong. Please try again."
+    }
+  },
+  "account": {
+    "title": "My Account",
+    "navigation": {
+      "overview": "Overview",
+      "profile": "My Profile",
+      "orders": "My Orders",
+      "addresses": "Delivery Addresses",
+      "wishlist": "Wishlist",
+      "reviews": "My Reviews",
+      "settings": "Settings",
+      "logout": "Log Out"
+    },
+    "profile": {
+      "title": "Profile Information",
+      "full_name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "save_changes": "Save Changes",
+      "update_success": "Your profile has been updated.",
+      "update_error": "Unable to update your profile."
+    },
+    "orders": {
+      "title": "My Orders",
+      "order_number": "Order Number",
+      "order_date": "Order Date",
+      "items": "Items",
+      "total": "Total",
+      "payment_method": "Payment Method",
+      "payment_status": "Payment Status",
+      "order_status": "Order Status",
+      "view_details": "View Details",
+      "track_order": "Track Order",
+      "empty_title": "No Orders Yet",
+      "empty_description": "Your orders will appear here after you place an order.",
+      "start_shopping": "Start Shopping"
+    },
+    "order_status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "out_for_delivery": "Out for Delivery",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "returned": "Returned"
+    },
+    "payment_status": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "unpaid": "Unpaid",
+      "failed": "Failed",
+      "refunded": "Refunded"
+    },
+    "wishlist": {
+      "title": "My Wishlist",
+      "empty_title": "Your Wishlist Is Empty",
+      "empty_description": "Save your favorite products to your wishlist.",
+      "browse_products": "Browse Products",
+      "remove": "Remove"
+    },
+    "addresses": {
+      "title": "Delivery Addresses",
+      "add_address": "Add New Address",
+      "edit_address": "Edit Address",
+      "delete_address": "Delete Address",
+      "save_address": "Save Address",
+      "default_address": "Default Address",
+      "empty_title": "No Saved Addresses"
+    }
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "products": "Products",
+      "categories": "Categories",
+      "brands": "Brands",
+      "orders": "Orders",
+      "customers": "Customers",
+      "reviews": "Reviews",
+      "inventory": "Inventory",
+      "deals": "Deals",
+      "users": "Users and Roles",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "total_sales": "Total Sales",
+      "total_orders": "Total Orders",
+      "total_customers": "Total Customers",
+      "total_products": "Total Products",
+      "pending_orders": "Pending Orders",
+      "low_stock_products": "Low Stock Products",
+      "recent_orders": "Recent Orders",
+      "top_products": "Top Products"
+    },
+    "products": {
+      "title": "Manage Products",
+      "add_product": "Add Product",
+      "edit_product": "Edit Product",
+      "delete_product": "Delete Product",
+      "product_name": "Product Name",
+      "slug": "URL Slug",
+      "description": "Description",
+      "category": "Category",
+      "brand": "Brand",
+      "price": "Selling Price",
+      "compare_at_price": "Original Price",
+      "stock_quantity": "Stock Quantity",
+      "sku": "SKU",
+      "images": "Product Images",
+      "featured": "Featured Product",
+      "best_seller": "Best Seller",
+      "new_arrival": "New Arrival",
+      "best_deal": "Best Deal",
+      "active": "Active",
+      "save_product": "Save Product",
+      "product_created": "Product added successfully.",
+      "product_updated": "Product updated successfully.",
+      "product_deleted": "Product deleted successfully."
+    },
+    "categories": {
+      "title": "Manage Categories",
+      "add_category": "Add Category",
+      "category_name": "Category Name",
+      "parent_category": "Parent Category",
+      "category_image": "Category Image",
+      "save_category": "Save Category"
+    },
+    "brands": {
+      "title": "Manage Brands",
+      "add_brand": "Add Brand",
+      "brand_name": "Brand Name",
+      "brand_logo": "Brand Logo",
+      "save_brand": "Save Brand"
+    },
+    "orders": {
+      "title": "Manage Orders",
+      "order_number": "Order Number",
+      "customer": "Customer",
+      "order_date": "Order Date",
+      "total": "Total",
+      "payment_method": "Payment Method",
+      "order_status": "Order Status",
+      "update_status": "Update Status",
+      "view_order": "View Order",
+      "cancel_order": "Cancel Order"
+    },
+    "reviews": {
+      "title": "Manage Reviews",
+      "customer": "Customer",
+      "product": "Product",
+      "rating": "Rating",
+      "comment": "Comment",
+      "approve": "Approve",
+      "reject": "Reject",
+      "delete": "Delete"
+    },
+    "common": {
+      "search": "Search",
+      "filter": "Filter",
+      "status": "Status",
+      "actions": "Actions",
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirm": "Confirm",
+      "loading": "Loading...",
+      "no_data": "No data available",
+      "success": "Success",
+      "error": "Something went wrong",
+      "delete_confirmation": "Are you sure you want to delete this item?"
+    }
+  },
+  "footer": {
+    "description": "Discover your favorite products and enjoy a simple shopping experience with Shoopby.",
+    "quick_links": "Quick Links",
+    "customer_service": "Customer Service",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "faq": "Frequently Asked Questions",
+    "how_to_order": "How to Order",
+    "shipping_policy": "Shipping Policy",
+    "return_policy": "Return Policy",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms and Conditions",
+    "payment_methods": "Payment Methods",
+    "cash_on_delivery": "Cash on Delivery",
+    "newsletter": {
+      "title": "Get Updates on New Deals",
+      "description": "Subscribe to receive updates about new products and special offers.",
+      "email_placeholder": "Enter your email address",
+      "submit_label": "Subscribe",
+      "success_message": "You have subscribed successfully.",
+      "error_message": "Unable to subscribe. Please try again."
+    },
+    "copyright": "© Shoopby. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "search": "Search",
+    "view_all": "View All",
+    "learn_more": "Learn More",
+    "back": "Go Back",
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "save": "Save",
+    "remove": "Remove",
+    "close": "Close",
+    "optional": "Optional",
+    "required": "Required",
+    "yes": "Yes",
+    "no": "No",
+    "currency": "৳",
+    "per_item": "per item",
+    "quantity": "Quantity",
+    "discount": "Discount",
+    "off": "OFF",
+    "success": "Success",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "empty_state": "No data available"
+  }
+}
