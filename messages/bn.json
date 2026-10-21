@@ -15,6 +15,7 @@
   "navigation": {
     "home": "হোম",
     "products": "সব পণ্য",
+    "products_tab": "পণ্য",
     "categories": "ক্যাটাগরি",
     "brands": "ব্র্যান্ড",
     "deals": "সেরা অফার",
@@ -25,7 +26,36 @@
     "cart": "কার্ট",
     "account": "আমার অ্যাকাউন্ট",
     "orders": "আমার অর্ডার",
-    "wishlist": "উইশলিস্ট"
+    "wishlist": "উইশলিস্ট",
+    "shop": "শপ",
+    "on_sale": "অফারে",
+    "new_arrivals": "নতুন পণ্য",
+    "search_placeholder": "পণ্য খুঁজুন...",
+    "search": "খুঁজুন",
+    "profile": "প্রোফাইল",
+    "theme": "কালার মোড বদলান",
+    "menu": "মেনু খুলুন",
+    "promo_message": "সাইন আপ করুন এবং প্রথম অর্ডারে ২০% ছাড় পান।",
+    "promo_action": "এখনই সাইন আপ করুন",
+    "promo_dismiss": "বন্ধ করুন",
+    "shop_menu": {
+      "fashion": "ফ্যাশন",
+      "women": "নারী",
+      "men": "পুরুষ",
+      "kids": "শিশু",
+      "shoes": "জুতা",
+      "accessories": "অ্যাকসেসরিজ",
+      "lifestyle": "ঘর ও জীবনযাপন",
+      "electronics": "ইলেকট্রনিক্স",
+      "home": "ঘরের জিনিস",
+      "beauty": "বিউটি",
+      "groceries": "মুদি",
+      "sports": "স্পোর্টস",
+      "featured": "নির্বাচিত",
+      "featured_title": "সবকিছু এক জায়গায়",
+      "featured_description": "সব ক্যাটাগরির পণ্য একসাথে দেখুন।",
+      "featured_action": "সব পণ্য"
+    }
   },
   "app": {
     "platform": {
