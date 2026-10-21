@@ -15,6 +15,7 @@
   "navigation": {
     "home": "Home",
     "products": "All Products",
+    "products_tab": "Products",
     "categories": "Categories",
     "brands": "Brands",
     "deals": "Best Deals",
@@ -25,7 +26,36 @@
     "cart": "Cart",
     "account": "My Account",
     "orders": "My Orders",
-    "wishlist": "Wishlist"
+    "wishlist": "Wishlist",
+    "shop": "Shop",
+    "on_sale": "On Sale",
+    "new_arrivals": "New Arrivals",
+    "search_placeholder": "Search for products...",
+    "search": "Search",
+    "profile": "Profile",
+    "theme": "Toggle color mode",
+    "menu": "Open menu",
+    "promo_message": "Sign up and get 20% off to your first order.",
+    "promo_action": "Sign Up Now",
+    "promo_dismiss": "Dismiss",
+    "shop_menu": {
+      "fashion": "Fashion",
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "shoes": "Shoes",
+      "accessories": "Accessories",
+      "lifestyle": "Home & Living",
+      "electronics": "Electronics",
+      "home": "Home",
+      "beauty": "Beauty",
+      "groceries": "Groceries",
+      "sports": "Sports",
+      "featured": "Featured",
+      "featured_title": "Everything in one place",
+      "featured_description": "Browse products across every category.",
+      "featured_action": "Shop all"
+    }
   },
   "app": {
     "platform": {
