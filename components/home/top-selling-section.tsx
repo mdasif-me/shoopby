@@ -84,7 +84,7 @@ export async function TopSellingSection() {
           </p>
         </div>
         <Link
-          href="/products?sort=popular"
+          href="/category?sort=popular"
           className="shrink-0 rounded-full border border-border px-4 py-2 text-base font-medium text-foreground transition-colors hover:bg-muted sm:px-5 sm:py-2.5"
         >
           {t("view_all_label")}

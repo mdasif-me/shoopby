@@ -36,7 +36,7 @@ export async function DressStyleSection() {
   const styleCards = styles.map((style) => (
     <Link
       key={style.key}
-      href={`/products?category=${style.key}`}
+      href={`/category?category=${style.key}`}
       className="group relative isolate flex aspect-square items-end overflow-hidden rounded-2xl bg-background p-3 text-foreground shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-md sm:rounded-3xl sm:p-4"
     >
       <Image

@@ -48,7 +48,7 @@ const circleClass =
 
 const menuLinks = [
   { key: "on_sale", href: "/deals" },
-  { key: "new_arrivals", href: "/products?sort=newest" },
+  { key: "new_arrivals", href: "/category?sort=newest" },
   { key: "brands", href: "/brands" },
 ] as const;
 
@@ -56,21 +56,21 @@ const shopGroups = [
   {
     titleKey: "fashion",
     links: [
-      { labelKey: "women", href: "/products?category=women" },
-      { labelKey: "men", href: "/products?category=men" },
-      { labelKey: "kids", href: "/products?category=kids" },
-      { labelKey: "shoes", href: "/products?category=shoes" },
-      { labelKey: "accessories", href: "/products?category=accessories" },
+      { labelKey: "women", href: "/category?category=women" },
+      { labelKey: "men", href: "/category?category=men" },
+      { labelKey: "kids", href: "/category?category=kids" },
+      { labelKey: "shoes", href: "/category?category=shoes" },
+      { labelKey: "accessories", href: "/category?category=accessories" },
     ],
   },
   {
     titleKey: "lifestyle",
     links: [
-      { labelKey: "electronics", href: "/products?category=electronics" },
-      { labelKey: "home", href: "/products?category=home" },
-      { labelKey: "beauty", href: "/products?category=beauty" },
-      { labelKey: "groceries", href: "/products?category=groceries" },
-      { labelKey: "sports", href: "/products?category=sports" },
+      { labelKey: "electronics", href: "/category?category=electronics" },
+      { labelKey: "home", href: "/category?category=home" },
+      { labelKey: "beauty", href: "/category?category=beauty" },
+      { labelKey: "groceries", href: "/category?category=groceries" },
+      { labelKey: "sports", href: "/category?category=sports" },
     ],
   },
 ] as const;
@@ -257,7 +257,7 @@ function MobileDock() {
                 <Link href="/deals" onClick={close} className={linkClass}>
                   {t("on_sale")}
                 </Link>
-                <Link href="/products?sort=newest" onClick={close} className={linkClass}>
+                <Link href="/category?sort=newest" onClick={close} className={linkClass}>
                   {t("new_arrivals")}
                 </Link>
                 <Link href="/cart" onClick={close} className={linkClass}>
