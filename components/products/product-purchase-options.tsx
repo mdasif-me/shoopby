@@ -168,7 +168,7 @@ export function ProductPurchaseOptions({
           </button>
         </div>
 
-        <div className="flex min-w-0 gap-2 sm:flex-row">
+        <div className="flex min-w-0 gap-2 flex-1 flex-row">
           <button
             type="button"
             onClick={handleAddToCart}
