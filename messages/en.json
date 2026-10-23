@@ -486,6 +486,8 @@
       "increase_quantity": "Increase Quantity",
       "decrease_quantity": "Decrease Quantity",
       "add_to_cart": "Add to Cart",
+      "added_to_cart": "Added to Cart",
+      "selection_unavailable": "Please select an available color and size.",
       "buy_now": "Buy Now",
       "related_products": "Related Products",
       "reviews_title": "Customer Reviews",
@@ -506,7 +508,7 @@
     }
   },
   "cart": {
-    "title": "Shopping Cart",
+    "title": "Your cart",
     "subtitle": "Review the products you've selected.",
     "empty_title": "Your Cart Is Empty",
     "empty_description": "Add your favorite products to the cart to start shopping.",
@@ -528,11 +530,32 @@
     "item_removed": "Product removed from your cart.",
     "quantity_updated": "Product quantity updated.",
     "stock_error": "There is not enough stock available.",
-    "minimum_quantity_error": "Quantity must be at least 1."
+    "minimum_quantity_error": "Quantity must be at least 1.",
+    "breadcrumb_label": "Breadcrumb",
+    "size": "Size",
+    "color": "Color",
+    "remove_item": "Remove {name} from cart",
+    "decrease_quantity": "Decrease quantity of {name}",
+    "increase_quantity": "Increase quantity of {name}",
+    "promo_placeholder": "Add promo code",
+    "apply_promo": "Apply",
+    "remove_promo": "Remove",
+    "promo_applied": "Promo code SAVE20 applied: 20% off.",
+    "promo_invalid": "That promo code is not valid. Try SAVE20.",
+    "promo_removed": "Promo code removed.",
+    "promo_hint": "Use SAVE20 for 20% off your subtotal.",
+    "loading": "Loading your cart...",
+    "items_label": "{count, plural, one {# cart item} other {# cart items}}",
+    "open_cart_preview": "Open cart preview",
+    "preview_title": "Recently added",
+    "preview_empty": "Your cart is empty.",
+    "more_items": "{count, plural, one {and # more item} other {and # more items}}",
+    "view_cart": "View Cart"
   },
   "checkout": {
     "title": "Checkout",
     "subtitle": "Enter your delivery details to complete your order.",
+    "secure_checkout": "Secure checkout",
     "steps": {
       "shipping": "Delivery Details",
       "payment": "Payment Method",
@@ -580,6 +603,8 @@
       "place_order": "Place Order",
       "processing": "Processing Order..."
     },
+    "demo_notice": "Demo checkout: your details are not submitted and no real order will be placed.",
+    "demo_submitted": "Checkout form validated. No order was sent because online order processing is not connected yet.",
     "validation": {
       "name_required": "Please enter your name.",
       "phone_required": "Please enter your phone number.",

@@ -14,6 +14,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import { Navigation } from "@/components/ui/navigation";
 import { SiteFooter } from "@/components/home/site-footer";
+import { CartProvider } from "@/components/cart/cart-provider";
 
 // google fonts
 const ibmPlexSansHeading = IBM_Plex_Sans({
@@ -72,13 +73,15 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
-            <Navigation />
-            <SmoothScroll root={true}>
-              <div className="pb-28 lg:pb-0">
-                {children}
-                <SiteFooter />
-              </div>
-            </SmoothScroll>
+            <CartProvider>
+              <Navigation />
+              <SmoothScroll root={true}>
+                <div className="pb-28 lg:pb-0">
+                  {children}
+                  <SiteFooter />
+                </div>
+              </SmoothScroll>
+            </CartProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

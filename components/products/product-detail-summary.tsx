@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ProductPurchaseOptions } from "@/components/products/product-purchase-options";
 
 type ProductColor = {
@@ -7,8 +6,8 @@ type ProductColor = {
 };
 
 export function ProductDetailSummary({
+  cartProduct,
   productName,
-  category,
   rating,
   ratingLabel,
   currencySymbol,
@@ -24,10 +23,17 @@ export function ProductDetailSummary({
   decreaseLabel,
   increaseLabel,
   addToCartLabel,
-  breadcrumbLabels,
+  addedToCartLabel,
+  buyNowLabel,
+  selectionUnavailableLabel,
 }: {
+  cartProduct: {
+    slug: string;
+    name: string;
+    image: string;
+    price: number;
+  };
   productName: string;
-  category: string;
   rating: string;
   ratingLabel: string;
   currencySymbol: string;
@@ -43,30 +49,12 @@ export function ProductDetailSummary({
   decreaseLabel: string;
   increaseLabel: string;
   addToCartLabel: string;
-  breadcrumbLabels: {
-    breadcrumb: string;
-    home: string;
-    shop: string;
-    men: string;
-  };
+  addedToCartLabel: string;
+  buyNowLabel: string;
+  selectionUnavailableLabel: string;
 }) {
   return (
     <div>
-      <nav
-        aria-label={breadcrumbLabels.breadcrumb}
-        className="mb-4 flex flex-wrap items-center gap-2 text-xs text-muted-foreground sm:mb-6"
-      >
-        <Link href="/" className="transition-colors hover:text-foreground">
-          {breadcrumbLabels.home}
-        </Link>
-        <span aria-hidden="true">›</span>
-        <span>{breadcrumbLabels.shop}</span>
-        <span aria-hidden="true">›</span>
-        <span>{breadcrumbLabels.men}</span>
-        <span aria-hidden="true">›</span>
-        <span>{category}</span>
-      </nav>
-
       <h1 className="font-heading text-2xl leading-tight font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
         {productName}
       </h1>
@@ -112,6 +100,7 @@ export function ProductDetailSummary({
       </p>
 
       <ProductPurchaseOptions
+        product={cartProduct}
         colors={colors}
         sizes={sizes}
         colorsLabel={colorsLabel}
@@ -120,6 +109,9 @@ export function ProductDetailSummary({
         decreaseLabel={decreaseLabel}
         increaseLabel={increaseLabel}
         addToCartLabel={addToCartLabel}
+        addedToCartLabel={addedToCartLabel}
+        buyNowLabel={buyNowLabel}
+        selectionUnavailableLabel={selectionUnavailableLabel}
       />
     </div>
   );

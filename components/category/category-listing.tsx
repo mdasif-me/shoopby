@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CategoryFilterPanel } from "@/components/category/category-filter-panel";
 import { CategoryMobileFilterSheet } from "@/components/category/category-mobile-filter-sheet";
@@ -22,8 +20,8 @@ type CategoryListingProps = {
   category: string;
   title: string;
   currencySymbol: string;
-  homeLabel: string;
   sort: SortOrder;
+  query: string;
 };
 
 const pageSize = 9;
@@ -33,8 +31,8 @@ export function CategoryListing({
   category,
   title,
   currencySymbol,
-  homeLabel,
   sort: initialSort,
+  query,
 }: CategoryListingProps) {
   const t = useTranslations("products.category");
   const [draftFilters, setDraftFilters] = useState(() =>
@@ -48,6 +46,9 @@ export function CategoryListing({
 
   const filteredProducts = useMemo(() => {
     const matches = products.filter((product) => {
+      const matchesQuery =
+        !query.trim() ||
+        product.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase());
       const inCategories =
         activeFilters.categories.length === 0 ||
         activeFilters.categories.includes(product.category);
@@ -64,7 +65,14 @@ export function CategoryListing({
         product.price >= activeFilters.minPrice &&
         product.price <= activeFilters.maxPrice;
 
-      return inCategories && inColors && inSizes && inStyles && inPrice;
+      return (
+        matchesQuery &&
+        inCategories &&
+        inColors &&
+        inSizes &&
+        inStyles &&
+        inPrice
+      );
     });
 
     switch (sort) {
@@ -85,7 +93,7 @@ export function CategoryListing({
       default:
         return matches;
     }
-  }, [products, activeFilters, sort]);
+  }, [products, activeFilters, sort, query]);
 
   const pageCount = Math.max(1, Math.ceil(filteredProducts.length / pageSize));
   const visibleProducts = filteredProducts.slice(
@@ -122,17 +130,6 @@ export function CategoryListing({
 
   return (
     <>
-      <nav
-        aria-label={t("breadcrumb_label")}
-        className="mb-5 flex items-center gap-2 text-xs text-muted-foreground sm:mb-7 sm:text-sm"
-      >
-        <Link href="/" className="transition-colors hover:text-foreground">
-          {homeLabel}
-        </Link>
-        <ChevronRight className="size-3.5" />
-        <span className="text-foreground">{title}</span>
-      </nav>
-
       <div className="grid gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-7">
         <CategoryFilterPanel
           filters={draftFilters}

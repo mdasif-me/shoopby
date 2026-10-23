@@ -52,7 +52,6 @@ export default async function ProductDetailsPage({
   const productTranslations = await getTranslations(
     `app.home.sections.${product.section}`,
   );
-  const navigation = await getTranslations("navigation");
   const currency = await getTranslations("app.platform");
   const productName = productTranslations(product.nameKey);
   const colors = [
@@ -94,8 +93,13 @@ export default async function ProductDetailsPage({
           imageLabel={t("gallery_label")}
         />
         <ProductDetailSummary
+          cartProduct={{
+            slug: product.slug,
+            name: productName,
+            image: product.image,
+            price: product.price,
+          }}
           productName={productName}
-          category={t("category_path")}
           rating={t("rating")}
           ratingLabel={t("rating_accessibility")}
           currencySymbol={currency("currency_symbol")}
@@ -111,12 +115,9 @@ export default async function ProductDetailsPage({
           decreaseLabel={t("decrease_quantity")}
           increaseLabel={t("increase_quantity")}
           addToCartLabel={t("add_to_cart")}
-          breadcrumbLabels={{
-            home: navigation("home"),
-            shop: navigation("shop"),
-            men: t("breadcrumb_men"),
-            breadcrumb: t("breadcrumb_label"),
-          }}
+          addedToCartLabel={t("added_to_cart")}
+          buyNowLabel={t("buy_now")}
+          selectionUnavailableLabel={t("selection_unavailable")}
         />
       </section>
 

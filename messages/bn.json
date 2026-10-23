@@ -486,6 +486,8 @@
       "increase_quantity": "পরিমাণ বাড়ান",
       "decrease_quantity": "পরিমাণ কমান",
       "add_to_cart": "কার্টে যোগ করুন",
+      "added_to_cart": "কার্টে যোগ হয়েছে",
+      "selection_unavailable": "অনুগ্রহ করে উপলভ্য রং ও সাইজ নির্বাচন করুন।",
       "buy_now": "এখনই কিনুন",
       "related_products": "সম্পর্কিত পণ্য",
       "reviews_title": "গ্রাহকের রিভিউ",
@@ -506,7 +508,7 @@
     }
   },
   "cart": {
-    "title": "শপিং কার্ট",
+    "title": "আপনার কার্ট",
     "subtitle": "আপনার নির্বাচিত পণ্যগুলো এখানে দেখুন।",
     "empty_title": "আপনার কার্ট খালি",
     "empty_description": "পছন্দের পণ্য কার্টে যোগ করে কেনাকাটা শুরু করুন।",
@@ -528,11 +530,32 @@
     "item_removed": "পণ্য কার্ট থেকে সরানো হয়েছে।",
     "quantity_updated": "পণ্যের পরিমাণ আপডেট করা হয়েছে।",
     "stock_error": "পর্যাপ্ত পণ্য স্টকে নেই।",
-    "minimum_quantity_error": "পরিমাণ কমপক্ষে ১ হতে হবে।"
+    "minimum_quantity_error": "পরিমাণ কমপক্ষে ১ হতে হবে।",
+    "breadcrumb_label": "নেভিগেশন পথ",
+    "size": "সাইজ",
+    "color": "রং",
+    "remove_item": "কার্ট থেকে {name} সরান",
+    "decrease_quantity": "{name}-এর পরিমাণ কমান",
+    "increase_quantity": "{name}-এর পরিমাণ বাড়ান",
+    "promo_placeholder": "প্রোমো কোড লিখুন",
+    "apply_promo": "প্রয়োগ",
+    "remove_promo": "সরান",
+    "promo_applied": "SAVE20 প্রোমো কোড প্রয়োগ হয়েছে: ২০% ছাড়।",
+    "promo_invalid": "প্রোমো কোডটি সঠিক নয়। SAVE20 ব্যবহার করে দেখুন।",
+    "promo_removed": "প্রোমো কোড সরানো হয়েছে।",
+    "promo_hint": "মোট দামে ২০% ছাড় পেতে SAVE20 ব্যবহার করুন।",
+    "loading": "কার্ট লোড হচ্ছে...",
+    "items_label": "{count}টি কার্ট পণ্য",
+    "open_cart_preview": "কার্টের সংক্ষিপ্ত তালিকা খুলুন",
+    "preview_title": "সাম্প্রতিক যোগ করা পণ্য",
+    "preview_empty": "আপনার কার্ট খালি।",
+    "more_items": "এবং আরও {count}টি পণ্য",
+    "view_cart": "কার্ট দেখুন"
   },
   "checkout": {
     "title": "চেকআউট",
     "subtitle": "আপনার ডেলিভারি তথ্য দিয়ে অর্ডার সম্পন্ন করুন।",
+    "secure_checkout": "নিরাপদ চেকআউট",
     "steps": {
       "shipping": "ডেলিভারি তথ্য",
       "payment": "পেমেন্ট পদ্ধতি",
@@ -580,6 +603,8 @@
       "place_order": "অর্ডার নিশ্চিত করুন",
       "processing": "অর্ডার প্রসেস হচ্ছে"
     },
+    "demo_notice": "ডেমো চেকআউট: আপনার তথ্য জমা হবে না এবং কোনো বাস্তব অর্ডার তৈরি হবে না।",
+    "demo_submitted": "চেকআউট ফর্ম যাচাই হয়েছে। অর্ডার প্রসেসিং যুক্ত না থাকায় কোনো অর্ডার পাঠানো হয়নি।",
     "validation": {
       "name_required": "আপনার নাম লিখুন।",
       "phone_required": "আপনার মোবাইল নম্বর লিখুন।",

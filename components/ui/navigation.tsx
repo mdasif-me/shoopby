@@ -27,6 +27,7 @@ import {
 import { LanguageSwitcher } from "@/components/motion/language-switcher";
 import { ThemeToggle } from "@/components/motion/theme-toggle";
 import { ExpandableTabs } from "@/components/motion/expandable-tabs";
+import { CartPreview } from "@/components/cart/cart-preview";
 import {
   ArrowUpRight,
   House,
@@ -34,7 +35,6 @@ import {
   Search,
   Settings,
   ShoppingBag,
-  ShoppingCart,
   Store,
   User,
   X,
@@ -99,7 +99,7 @@ function ProductSearch({
   const t = useTranslations("navigation");
 
   return (
-    <form action="/products" className={cn("relative w-full", className)}>
+    <form action="/category" className={cn("relative w-full", className)}>
       <Search className="pointer-events-none absolute top-1/2 start-4 size-5 -translate-y-1/2 text-neutral-400" />
       <Input
         type="search"
@@ -202,9 +202,11 @@ function routeTab(pathname: string) {
   if (pathname.startsWith("/account")) return "profile";
   if (
     pathname.startsWith("/products") ||
+    pathname.startsWith("/category") ||
     pathname.startsWith("/deals") ||
     pathname.startsWith("/brands") ||
-    pathname.startsWith("/cart")
+    pathname.startsWith("/cart") ||
+    pathname.startsWith("/checkout")
   ) {
     return "products";
   }
@@ -251,7 +253,7 @@ function MobileDock() {
             icon: <ShoppingBag className="size-4" />,
             content: (
               <div className="flex w-full flex-col py-1">
-                <Link href="/products" onClick={close} className={linkClass}>
+                <Link href="/category" onClick={close} className={linkClass}>
                   {t("products")}
                 </Link>
                 <Link href="/deals" onClick={close} className={linkClass}>
@@ -362,7 +364,7 @@ export function Navigation() {
                           {shop("featured")}
                         </h4>
                         <Link
-                          href="/products"
+                          href="/category"
                           className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl bg-neutral-100 p-5 no-underline dark:bg-neutral-900"
                         >
                           <div>
@@ -409,9 +411,7 @@ export function Navigation() {
             >
               <Search className="size-5" strokeWidth={1.75} />
             </button>
-            <Link href="/cart" aria-label={t("cart")} className={cn(circleClass, "hidden lg:inline-flex")}>
-              <ShoppingCart className="size-5" strokeWidth={1.75} />
-            </Link>
+            <CartPreview />
             <AccountMenu />
           </div>
         </div>

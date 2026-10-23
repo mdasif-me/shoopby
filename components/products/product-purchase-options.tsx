@@ -2,13 +2,23 @@
 
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useCart } from "@/components/cart/cart-provider";
 
 type ColorOption = {
   name: string;
   value: string;
 };
 
+type ProductForCart = {
+  slug: string;
+  name: string;
+  image: string;
+  price: number;
+};
+
 export function ProductPurchaseOptions({
+  product,
   colors,
   colorsLabel,
   sizes,
@@ -17,7 +27,11 @@ export function ProductPurchaseOptions({
   decreaseLabel,
   increaseLabel,
   addToCartLabel,
+  addedToCartLabel,
+  buyNowLabel,
+  selectionUnavailableLabel,
 }: {
+  product: ProductForCart;
   colors: ColorOption[];
   colorsLabel: string;
   sizes: string[];
@@ -26,10 +40,49 @@ export function ProductPurchaseOptions({
   decreaseLabel: string;
   increaseLabel: string;
   addToCartLabel: string;
+  addedToCartLabel: string;
+  buyNowLabel: string;
+  selectionUnavailableLabel: string;
 }) {
   const [selectedColor, setSelectedColor] = useState(0);
   const [selectedSize, setSelectedSize] = useState(2);
   const [quantity, setQuantity] = useState(1);
+  const [selectionError, setSelectionError] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
+  const { addItem, buyNow } = useCart();
+  const router = useRouter();
+
+  function getSelection() {
+    const color = colors[selectedColor];
+    const size = sizes[selectedSize];
+    if (!color || !size) {
+      setSelectionError(true);
+      return null;
+    }
+
+    setSelectionError(false);
+    return {
+      ...product,
+      colorName: color.name,
+      colorValue: color.value,
+      size,
+      quantity,
+    };
+  }
+
+  function handleAddToCart() {
+    const selection = getSelection();
+    if (!selection) return;
+    addItem(selection);
+    setAddedToCart(true);
+  }
+
+  function handleBuyNow() {
+    const selection = getSelection();
+    if (!selection) return;
+    buyNow(selection);
+    router.push("/checkout");
+  }
 
   return (
     <div className="mt-5 divide-y divide-border border-y border-border">
@@ -42,7 +95,10 @@ export function ProductPurchaseOptions({
               type="button"
               aria-label={color.name}
               aria-pressed={selectedColor === index}
-              onClick={() => setSelectedColor(index)}
+              onClick={() => {
+                setSelectedColor(index);
+                setAddedToCart(false);
+              }}
               className={`grid size-9 place-items-center rounded-full border-2 transition ${
                 selectedColor === index
                   ? "border-background ring-1 ring-foreground"
@@ -66,7 +122,10 @@ export function ProductPurchaseOptions({
               key={size}
               type="button"
               aria-pressed={selectedSize === index}
-              onClick={() => setSelectedSize(index)}
+              onClick={() => {
+                setSelectedSize(index);
+                setAddedToCart(false);
+              }}
               className={`min-w-16 rounded-full px-4 py-2 text-xs font-medium transition-colors sm:min-w-20 sm:text-sm ${
                 selectedSize === index
                   ? "bg-foreground text-background"
@@ -85,7 +144,10 @@ export function ProductPurchaseOptions({
             type="button"
             aria-label={decreaseLabel}
             disabled={quantity === 1}
-            onClick={() => setQuantity((current) => Math.max(1, current - 1))}
+            onClick={() => {
+              setQuantity((current) => Math.max(1, current - 1));
+              setAddedToCart(false);
+            }}
             className="grid size-8 place-items-center rounded-full text-foreground transition-colors hover:bg-background disabled:opacity-40"
           >
             <Minus className="size-4" />
@@ -96,20 +158,43 @@ export function ProductPurchaseOptions({
           <button
             type="button"
             aria-label={increaseLabel}
-            onClick={() => setQuantity((current) => current + 1)}
+            onClick={() => {
+              setQuantity((current) => current + 1);
+              setAddedToCart(false);
+            }}
             className="grid size-8 place-items-center rounded-full text-foreground transition-colors hover:bg-background"
           >
             <Plus className="size-4" />
           </button>
         </div>
 
-        <button
-          type="button"
-          className="h-11 flex-1 rounded-full bg-foreground px-6 py-3 md:py-0 text-sm font-medium text-background transition-opacity hover:opacity-85"
-        >
-          {addToCartLabel}
-        </button>
+        <div className="flex min-w-0 gap-2 sm:flex-row">
+          <button
+            type="button"
+            onClick={handleAddToCart}
+            className="h-11 flex-1 rounded-full bg-foreground py-3 md:py-0 px-4 text-sm font-medium text-background transition-opacity hover:opacity-85"
+          >
+            {addedToCart ? addedToCartLabel : addToCartLabel}
+          </button>
+          <button
+            type="button"
+            onClick={handleBuyNow}
+            className="h-11 flex-1 rounded-full bg-foreground py-3 md:py-0 px-4 text-sm font-medium text-background transition-opacity hover:opacity-85"
+          >
+            {buyNowLabel}
+          </button>
+        </div>
       </div>
+      {selectionError && (
+        <p role="alert" className="pb-4 text-sm text-rose-600">
+          {selectionUnavailableLabel}
+        </p>
+      )}
+      {addedToCart && (
+        <p aria-live="polite" className="pb-4 text-sm text-emerald-700">
+          {addedToCartLabel}
+        </p>
+      )}
     </div>
   );
 }

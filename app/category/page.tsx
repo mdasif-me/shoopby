@@ -6,6 +6,7 @@ import { categoryProducts } from "@/lib/category-catalog";
 type SearchParams = Promise<{
   category?: string | string[];
   sort?: string | string[];
+  q?: string | string[];
 }>;
 
 const categoryLabels = [
@@ -72,7 +73,6 @@ export default async function CategoryPage({
   const requestedCategory = getSingleParam(params.category)?.toLowerCase();
   const category =
     categoryLabels.find((value) => value === requestedCategory) ?? "casual";
-  const navigation = await getTranslations("navigation");
   const categoryT = await getTranslations("products.category");
   const platform = await getTranslations("app.platform");
 
@@ -96,8 +96,8 @@ export default async function CategoryPage({
         category={category}
         title={categoryT(`title_${category}`)}
         currencySymbol={platform("currency_symbol")}
-        homeLabel={navigation("home")}
         sort={getSort(getSingleParam(params.sort))}
+        query={getSingleParam(params.q) ?? ""}
       />
     </main>
   );
