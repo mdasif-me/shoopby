@@ -299,6 +299,108 @@
       "remove_from_wishlist": "Remove from Wishlist"
     },
     "details": {
+      "product_name": "One Life Graphic T-shirt",
+      "category_path": "T-shirts",
+      "breadcrumb_label": "Breadcrumb",
+      "tabs_label": "Product sections",
+      "breadcrumb_men": "Men",
+      "gallery_label": "Product images",
+      "rating": "4.5/5",
+      "rating_accessibility": "Rated 4.5 out of 5 stars",
+      "product_description": "Designed for everyday comfort and effortless style, this piece is crafted from soft, breathable fabric that feels great all day.",
+      "brand_name": "Shoopby",
+      "material": "Material",
+      "material_value": "Soft, breathable cotton blend",
+      "fit": "Fit",
+      "fit_value": "Regular fit",
+      "care": "Care",
+      "care_value": "Machine wash cold with similar colors",
+      "select_colors": "Select Colors",
+      "color_olive": "Olive green",
+      "color_teal": "Deep teal",
+      "color_navy": "Navy blue",
+      "choose_size": "Choose Size",
+      "size_small": "Small",
+      "size_medium": "Medium",
+      "size_large": "Large",
+      "size_x_large": "X-Large",
+      "tab_details": "Product Details",
+      "tab_reviews": "Rating & Reviews",
+      "tab_faqs": "FAQs",
+      "all_reviews_title": "All Reviews",
+      "review_count_label": "(451)",
+      "rating_label": "Rating",
+      "verified_purchase": "Verified customer",
+      "latest": "Latest",
+      "highest_rated": "Highest Rated",
+      "lowest_rated": "Lowest Rated",
+      "all_ratings": "All ratings",
+      "five_stars": "5 stars",
+      "four_stars": "4 stars",
+      "three_stars": "3 stars",
+      "load_more_reviews": "Load More Reviews",
+      "review_modal_title": "Write a Review",
+      "reviewer_name": "Your name",
+      "reviewer_name_placeholder": "Enter your name",
+      "your_review": "Your review",
+      "review_placeholder": "Tell us what you think about this product...",
+      "submit_review": "Submit Review",
+      "cancel_review": "Cancel",
+      "review_preview_notice": "Your review is a local preview and will not be saved.",
+      "related_title": "You might also like",
+      "faq_title": "Frequently Asked Questions",
+      "faq_1": {
+        "question": "What is this t-shirt made from?",
+        "answer": "It is made from a soft, breathable fabric selected for comfortable everyday wear."
+      },
+      "faq_2": {
+        "question": "How should I choose my size?",
+        "answer": "Choose your usual size for a regular fit. If you prefer a looser fit, consider sizing up."
+      },
+      "faq_3": {
+        "question": "How can I care for this product?",
+        "answer": "Wash with similar colors in cold water and follow the care instructions on the garment label."
+      },
+      "review_1": {
+        "name": "Samantha D.",
+        "quote": "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+        "date": "Posted on August 14, 2023"
+      },
+      "review_2": {
+        "name": "Alex M.",
+        "quote": "This t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
+        "date": "Posted on August 15, 2023"
+      },
+      "review_3": {
+        "name": "Ethan R.",
+        "quote": "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+        "date": "Posted on August 16, 2023"
+      },
+      "review_4": {
+        "name": "Olivia P.",
+        "quote": "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+        "date": "Posted on August 17, 2023"
+      },
+      "review_5": {
+        "name": "Liam K.",
+        "quote": "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+        "date": "Posted on August 18, 2023"
+      },
+      "review_6": {
+        "name": "Ava H.",
+        "quote": "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
+        "date": "Posted on August 19, 2023"
+      },
+      "review_7": {
+        "name": "Noah B.",
+        "quote": "The fit is comfortable and the graphic looks even better in person. It has quickly become one of my favorite everyday pieces.",
+        "date": "Posted on August 20, 2023"
+      },
+      "review_8": {
+        "name": "Mia T.",
+        "quote": "Great quality and a thoughtful design. The fabric feels soft, and the shirt still looks new after several washes.",
+        "date": "Posted on August 21, 2023"
+      },
       "description": "Product Description",
       "specifications": "Specifications",
       "brand": "Brand",
