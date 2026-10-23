@@ -5,6 +5,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes brand-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 63.999rem) {
+  .brand-marquee-track {
+    animation: brand-marquee 36s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee-track {
+    animation: none;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -47,11 +65,29 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  /* hero */
+  --color-hero-outer-bg: var(--hero-outer-bg);
+  --color-hero-card-bg: var(--hero-card-bg);
+  --color-hero-image-bg: var(--hero-image-bg);
+  --color-hero-eyebrow-bg: var(--hero-eyebrow-bg);
+  --color-hero-eyebrow-fg: var(--hero-eyebrow-fg);
+  /* brand strip */
+  --color-brand-strip-bg: var(--brand-strip-bg);
+  --color-brand-strip-fg: var(--brand-strip-fg);
 }
 
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  /* hero section */
+  --hero-outer-bg: oklch(0.96 0 0);
+  --hero-card-bg: oklch(1 0 0);
+  --hero-image-bg: oklch(0.92 0 0);
+  --hero-eyebrow-bg: oklch(0.94 0 0);
+  --hero-eyebrow-fg: oklch(0.3 0 0);
+  /* brand strip */
+  --brand-strip-bg: oklch(0.145 0 0);
+  --brand-strip-fg: oklch(0.985 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -87,6 +123,15 @@
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
+  /* hero section */
+  --hero-outer-bg: oklch(0.2 0 0);
+  --hero-card-bg: oklch(0.205 0 0);
+  --hero-image-bg: oklch(0.17 0 0);
+  --hero-eyebrow-bg: oklch(0.269 0 0);
+  --hero-eyebrow-fg: oklch(0.8 0 0);
+  /* brand strip */
+  --brand-strip-bg: oklch(0.08 0 0);
+  --brand-strip-fg: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);

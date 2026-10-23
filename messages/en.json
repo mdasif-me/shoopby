@@ -123,13 +123,20 @@
         "suggestions_label": "Popular Searches"
       },
       "hero": {
-        "eyebrow": "Welcome to Shoopby",
-        "title": "Everything You Love, All in One Place",
-        "description": "Discover your favorite products, explore the best deals, and enjoy a seamless shopping experience.",
+        "eyebrow": "New Season",
+        "title": "Find Clothes That Matches Your Style",
+        "description": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
         "primary_action": "Shop Now",
         "primary_action_href": "/products",
         "secondary_action": "Explore Deals",
-        "secondary_action_href": "/deals"
+        "secondary_action_href": "/deals",
+        "image_alt": "A woman carrying shopping bags in a fashionable outfit",
+        "brands_count": "200+",
+        "brands_label": "International Brands",
+        "products_count": "2,000+",
+        "products_label": "High-Quality Products",
+        "customers_count": "30,000+",
+        "customers_label": "Happy Customers"
       },
       "carousel": [
         {
@@ -187,9 +194,50 @@
         },
         "new_arrivals": {
           "title": "New Arrivals",
-          "description": "Explore our latest product collection.",
-          "view_all_label": "View New Arrivals",
+          "description": "Fresh drops across everyday essentials and statement pieces.",
+          "view_all_label": "View All",
+          "product_1_name": "T-Shirt With Tape Details",
+          "product_2_name": "Skinny Fit Jeans",
+          "product_3_name": "Checkered Shirt",
+          "product_4_name": "Sleeve Striped T-Shirt",
           "empty_label": "No new products available right now"
+        },
+        "top_selling": {
+          "title": "Top Selling",
+          "description": "Best-performing pieces customers keep coming back for.",
+          "view_all_label": "View All",
+          "product_1_name": "Vertical Striped Shirt",
+          "product_2_name": "Courage Graphic T-Shirt",
+          "product_3_name": "Loose Fit Bermuda Shorts",
+          "product_4_name": "Faded Skinny Jeans"
+        },
+        "dress_style": {
+          "title": "Browse by Dress Style",
+          "description": "Find the look that feels like you.",
+          "casual": "Casual",
+          "formal": "Formal",
+          "party": "Party",
+          "gym": "Gym",
+          "streetwear": "Streetwear",
+          "weekend": "Weekend"
+        },
+        "customer_reviews": {
+          "title": "Our Happy Customers",
+          "description": "Real feedback from people who shop with SHOOPBY.",
+          "rating_label": "5 out of 5 stars",
+          "verified_label": "Verified customer",
+          "review_1": {
+            "quote": "I'm blown away by the quality and style of the clothes I received. From casual wear to elegant dresses, every piece exceeded my expectations."
+          },
+          "review_2": {
+            "quote": "Finding clothes that align with my personal style used to be a challenge until I discovered SHOOPBY. The range of options makes shopping easy."
+          },
+          "review_3": {
+            "quote": "The pieces are comfortable, thoughtfully made, and easy to style. I found exactly what I needed for the season."
+          },
+          "review_4": {
+            "quote": "I love how simple it is to find new favorites. The collection has styles for everyday wear and special occasions."
+          }
         },
         "brands": {
           "title": "Popular Brands",
@@ -615,6 +663,12 @@
   },
   "footer": {
     "description": "Discover your favorite products and enjoy a simple shopping experience with Shoopby.",
+    "company": "Company",
+    "help": "Help",
+    "faq_title": "FAQ",
+    "resources": "Resources",
+    "features": "Features",
+    "careers": "Careers",
     "quick_links": "Quick Links",
     "customer_service": "Customer Service",
     "about_us": "About Us",
@@ -625,17 +679,16 @@
     "return_policy": "Return Policy",
     "privacy_policy": "Privacy Policy",
     "terms_conditions": "Terms and Conditions",
-    "payment_methods": "Payment Methods",
     "cash_on_delivery": "Cash on Delivery",
     "newsletter": {
-      "title": "Get Updates on New Deals",
+      "title": "STAY UPTO DATE ABOUT OUR LATEST OFFERS",
       "description": "Subscribe to receive updates about new products and special offers.",
       "email_placeholder": "Enter your email address",
-      "submit_label": "Subscribe",
+      "submit_label": "Subscribe to Newsletter",
       "success_message": "You have subscribed successfully.",
       "error_message": "Unable to subscribe. Please try again."
     },
-    "copyright": "© Shoopby. All rights reserved."
+    "copyright": "SHOOPBY © 2000-2023, All Rights Reserved"
   },
   "common": {
     "loading": "Loading...",

@@ -13,6 +13,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
 import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import { Navigation } from "@/components/ui/navigation";
+import { SiteFooter } from "@/components/home/site-footer";
 
 // google fonts
 const ibmPlexSansHeading = IBM_Plex_Sans({
@@ -50,12 +51,12 @@ export default async function RootLayout({
 }) {
   const locale = await getLocale();
   return (
-    <html suppressHydrationWarning lang={locale} className="h-full">
+    <html suppressHydrationWarning lang={locale} className="min-h-full">
       <head />
       <body
         suppressHydrationWarning
         className={cn(
-          "h-full",
+          "min-h-full",
           "antialiased",
           geistSans.variable,
           geistMono.variable,
@@ -73,7 +74,10 @@ export default async function RootLayout({
           <NextIntlClientProvider>
             <Navigation />
             <SmoothScroll root={true}>
-              <div className="pb-28 lg:pb-0">{children}</div>
+              <div className="pb-28 lg:pb-0">
+                {children}
+                <SiteFooter />
+              </div>
             </SmoothScroll>
           </NextIntlClientProvider>
         </ThemeProvider>
